@@ -10,4 +10,4 @@ Choose between Easy, Medium or Hard then answer 25 questions based on your choic
 
 BEST OF LUCK!
 
-[Screenshot](https://pbs.twimg.com/profile_images/1001732228022460416/5yUtGpjQ_400x400.jpg)
+[Screenshot](https://github.com/alakijaayo/Manchester_United_quiz/blob/master/5yUtGpjQ_400x400.jpg)
