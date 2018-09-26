@@ -24,4 +24,15 @@ feature 'United Quiz' do
     click_button 'Submit'
     expect(page).to have_content "You have selected the Hard questions. Only for the Die Hard Red Devils!!"
   end
+
+  scenario 'It tells the player to try again' do
+    visit('/')
+    select 'Select', from: 'level'
+    click_button 'Submit'
+    expect(page).to have_content "Er.... not sure what a Select level is... go back and try again!"
+  end
+
+  scenario 'It loads the easy questions' do
+    vi
+  end
 end

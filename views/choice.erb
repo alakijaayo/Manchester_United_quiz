@@ -1,9 +1,12 @@
-<% if @level == "Easy" %>
-<h1>You have selected the <%= @level %> questions.</h1>
+<% if @level.choice == "Easy" %>
+<h1>You have selected the <%= @level.choice %> questions.</h1>
 <% end %>
-<% if @level == "Medium" %>
-<h1>You have selected the <%= @level %> questions.</h1>
+<% if @level.choice == "Medium" %>
+<h1>You have selected the <%= @level.choice %> questions.</h1>
 <% end %>
-<% if @level == "Hard" %>
-<h1>"You have selected the <%= @level %> questions. Only for the Die Hard Red Devils!!"</h1>
+<% if @level.choice == "Hard" %>
+<h1>"You have selected the <%= @level.choice %> questions. Only for the Die Hard Red Devils!!"</h1>
+<% end %>
+<% if @level.choice == "Select" %>
+<h1>Er.... not sure what a <%= @level.choice %> level is... go back and try again!</h1>
 <% end %>

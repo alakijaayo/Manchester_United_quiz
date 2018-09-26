@@ -1,4 +1,5 @@
 require 'sinatra/base'
+require './lib/level'
 
 class Quiz < Sinatra::Base
   enable :sessions
@@ -7,7 +8,7 @@ class Quiz < Sinatra::Base
   end
 
   post '/level' do
-    session[:level] = params[:level]
+    session[:level] = Level.new(params[:level])
     redirect '/start'
   end
 
@@ -15,4 +16,6 @@ class Quiz < Sinatra::Base
     @level = session[:level]
     erb :choice
   end
+
+  run! if app_file == $0
 end
