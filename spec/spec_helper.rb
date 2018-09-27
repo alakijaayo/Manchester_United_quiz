@@ -4,6 +4,7 @@ require './United_Quiz'
 require 'capybara'
 require 'capybara/rspec'
 require 'pg'
+require 'features/web_helpers'
 
 Capybara.app = Quiz
 

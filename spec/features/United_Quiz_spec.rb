@@ -5,23 +5,17 @@ feature 'United Quiz' do
   end
 
   scenario 'it allows you to pick easy questions' do
-    visit('/')
-    select 'Easy', from: 'level'
-    click_button 'Submit'
+    easy_sign
     expect(page).to have_content "You have selected the Easy questions."
   end
 
   scenario 'it allows you to pick medium questions' do
-    visit('/')
-    select 'Medium', from: 'level'
-    click_button 'Submit'
+    medium_sign
     expect(page).to have_content "You have selected the Medium questions."
   end
 
   scenario 'it allows you to pick hard questions' do
-    visit('/')
-    select 'Hard', from: 'level'
-    click_button 'Submit'
+    hard_sign
     expect(page).to have_content "You have selected the Hard questions. Only for the Die Hard Red Devils!!"
   end
 
@@ -33,6 +27,7 @@ feature 'United Quiz' do
   end
 
   scenario 'It loads the easy questions' do
-    vi
+    easy_sign
+
   end
 end
