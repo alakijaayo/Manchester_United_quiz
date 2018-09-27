@@ -14,6 +14,7 @@ class Quiz < Sinatra::Base
 
   get '/start' do
     @level = session[:level]
+    @level.load
     erb :choice
   end
 

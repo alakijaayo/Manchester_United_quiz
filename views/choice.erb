@@ -13,5 +13,12 @@
 <form action='/' method='get'>
   <input type="submit" value="Whoops!!">
 </form>
-
 <% end %>
+
+<form>
+  <h1><%= @level.result['question'] %></h1>
+  <input type="submit" value="<%= @level.result['option_a'] %>">
+  <input type="submit" value="<%= @level.result['option_b'] %>">
+  <input type="submit" value="<%= @level.result['option_c'] %>">
+  <input type="submit" value="<%= @level.result['option_d'] %>">
+</form>

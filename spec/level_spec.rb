@@ -21,4 +21,10 @@ describe Level do
   it 'stores the level choice of the player if Select' do
     expect(select.choice).to eq "Select"
   end
+
+  # describe '#load' do
+  #   it 'loads the easy questions from the database' do
+  #     expect(easy.choice.load).to include
+  #   end
+  # end
 end

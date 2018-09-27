@@ -28,6 +28,6 @@ feature 'United Quiz' do
 
   scenario 'It loads the easy questions' do
     easy_sign
-
+    expect(page).to have_content "What year did United win the Treble?"
   end
 end
