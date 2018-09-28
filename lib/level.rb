@@ -11,5 +11,5 @@ class Level
     choice == "Easy"
     connection = PG.connect(dbname: 'easy_questions')
     @result = connection.exec("SELECT * FROM easy")[0]
-  end
+  end  
 end

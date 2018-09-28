@@ -26,8 +26,38 @@ feature 'United Quiz' do
     expect(page).to have_content "Er.... not sure what a Select level is... go back and try again!"
   end
 
-  scenario 'It loads the easy questions' do
-    easy_sign
-    expect(page).to have_content "What year did United win the Treble?"
+  feature '#easy' do
+    scenario 'It loads the easy questions' do
+      easy_sign
+      expect(page).to have_content "What year did United win the Treble?"
+    end
+
+    scenario 'It praises the player on getting the question right' do
+      srand(123)
+      easy_sign
+      click_button '1999'
+      expect(page).to have_content 'Well Done!'
+    end
+
+    scenario 'It tells the player they got the question wrong' do
+      srand(234)
+      easy_sign
+      click_button '2008'
+      expect(page).to have_content 'Wrong!'
+    end
+
+    scenario 'it tells the player if they made a bad choice' do
+      srand(345)
+      easy_sign
+      click_button '1968'
+      expect(page).to have_content 'Wrong!'
+    end
+
+    scenario 'It tells the player they made the wrong choice' do
+      srand(345)
+      easy_sign
+      click_button '1992'
+      expect(page).to have_content 'Wrong!'
+    end
   end
 end
