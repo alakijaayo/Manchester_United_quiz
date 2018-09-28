@@ -22,9 +22,13 @@ describe Level do
     expect(select.choice).to eq "Select"
   end
 
-  # describe '#load' do
-  #   it 'loads the easy questions from the database' do
-  #     expect(easy.choice.load).to include
-  #   end
-  # end
+  describe '.load' do
+    it 'loads the easy questions from the database' do
+      connection = PG.connect(dbname: 'easy_questions')
+
+      beginner = easy.load
+
+      expect(beginner).to include("question" => "What year did United win the Treble?")
+    end
+  end
 end
