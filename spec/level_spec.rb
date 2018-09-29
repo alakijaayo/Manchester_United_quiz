@@ -26,7 +26,7 @@ describe Level do
     it 'loads the easy questions from the database' do
       connection = PG.connect(dbname: 'easy_questions')
 
-      beginner = easy.load
+      beginner = easy.load(0)
 
       expect(beginner).to include("question" => "What year did United win the Treble?")
     end

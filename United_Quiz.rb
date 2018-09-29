@@ -13,15 +13,17 @@ class Quiz < Sinatra::Base
   end
 
   get '/start' do
+    @question_number = 0
     @level = session[:level]
-    @level.load
+    @level.load(@question_number)
     erb :choice
   end
 
   post '/answer' do
     p params
+    @question_number = 0
     @level = session[:level]
-    @level.load
+    @level.load(@question_number)
     if params[:answer] == @level.result['correct']
       redirect '/correct'
     else
