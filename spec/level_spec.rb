@@ -25,10 +25,20 @@ describe Level do
   describe '.load' do
     it 'loads the easy questions from the database' do
       connection = PG.connect(dbname: 'easy_questions')
-
       beginner = easy.load(0)
-
       expect(beginner).to include("question" => "What year did United win the Treble?")
+    end
+
+    it 'loads the medium questions from the database' do
+      connecion = PG.connect(dbname: 'medium_questions')
+      advanced = medium.load(0)
+      expect(advanced).to include("question" => "Who did Manchester United beat in the Quarter-Final on their way to winning the Champions League in 1999?")
+    end
+
+    it 'loads the hard questions from the database' do
+      connection = PG.connect(dbname: 'hard_questions')
+      expert = hard.load(0)
+      expect(expert).to include("question" =>"Manchester United won their first European Cup/Champions League in 1968. But which Maltese football team did they beat in the first round 4-0 on aggregate?")
     end
   end
 end
