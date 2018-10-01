@@ -1,0 +1,7 @@
+<form action='/answer' method='post'>
+  <h1><%= @level.result['question'] %></h1>
+  <input type="submit" name='answer' value="<%= @level.result['option_a'] %>">
+  <input type="submit" name='answer' value="<%= @level.result['option_b'] %>">
+  <input type="submit" name='answer' value="<%= @level.result['option_c'] %>">
+  <input type="submit" name='answer' value="<%= @level.result['option_d'] %>">
+</form>
