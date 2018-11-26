@@ -1,5 +1,7 @@
+<h2>Question Number <%= session[:number].question + 1 %></h2>
+
 <form action='/answer' method='post'>
-  <h1><%= @level.result['question'] %></h1>
+  <h2><%= @level.result['question'] %></h2>
   <input type="submit" name='answer' value="<%= @level.result['option_a'] %>">
   <input type="submit" name='answer' value="<%= @level.result['option_b'] %>">
   <input type="submit" name='answer' value="<%= @level.result['option_c'] %>">

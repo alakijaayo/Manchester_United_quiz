@@ -7,7 +7,7 @@ class Number
   end
 
   def add
-    @question = question + 1
+      @question = question + 1
   end
 
 end

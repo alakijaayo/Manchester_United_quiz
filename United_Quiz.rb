@@ -33,18 +33,17 @@ class Quiz < Sinatra::Base
   end
 
   get '/correct' do
-    @correct = ["Correct!", "Your right!", "Well Done!", "Super!"].sample
-    session[:number].add
-    erb :correct
+      @correct = ["Correct!", "You are right!", "Well Done!", "Super!"].sample
+      erb :correct
   end
 
   get '/incorrect' do
     @incorrect = ["Wrong!", "Unlucky!", "Try Again!", "Too Bad!"].sample
-    session[:number].add
     erb :incorrect
   end
 
   post '/nextquestion' do
+    session[:number].add
     @level = session[:level]
     @level.load(session[:number].question)
     erb :question
