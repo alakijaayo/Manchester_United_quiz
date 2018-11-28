@@ -9,5 +9,3 @@ If you are up for the challenge, test your knowledge of how well you know the gr
 Choose between Easy, Medium or Hard then answer 25 questions based on your choice. At the end of the questionnaire you will be given a grade to determine whether you are a Manchester United true fan, or just an Arsenal fan in disguise!!
 
 BEST OF LUCK!
-
-[Screenshot](https://github.com/alakijaayo/Manchester_United_quiz/blob/master/5yUtGpjQ_400x400.jpg)
