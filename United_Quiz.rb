@@ -26,6 +26,7 @@ class Quiz < Sinatra::Base
     @level = session[:level]
     @level.load(session[:number].question)
     if params[:answer] == @level.result['correct']
+      session[:number].correct
       redirect '/correct'
     else
       redirect '/incorrect'
@@ -47,6 +48,10 @@ class Quiz < Sinatra::Base
     @level = session[:level]
     @level.load(session[:number].question)
     erb :question
+  end
+
+  post '/final' do
+    erb :final
   end
 
   run! if app_file == $0

@@ -1,5 +1,13 @@
 <h1><%= @incorrect %></h1>
 
+<% if session[:number].question < 24 %>
 <form action='/nextquestion' method='post'>
   <input type="submit" value="Next Question">
 </form>
+<% end %>
+
+<% if session[:number].question == 24 %>
+<form action='/final' method='post'>
+  <input type="submit" value="Get Results!">
+</form>
+<% end %>
