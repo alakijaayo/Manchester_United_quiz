@@ -1,1 +1,13 @@
 <h1>You got <%= session[:number].answers %> out of 25 correct!</h1>
+
+<h3>Why not try again at a different level?</h3>
+<form action="/level" method="post">
+  <label>Level:</label>
+  <select name="level">
+    <option selected>Select</option>
+    <option value="Easy">Easy</option>
+    <option value="Medium">Medium</option>
+    <option value="Hard">Hard</option>
+  </select>
+  <input type="submit" value="Submit">
+</form>
